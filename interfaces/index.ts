@@ -8,6 +8,6 @@ export interface CardProps{
 
 // button props
 export interface ButtonProps {
-    labe: string;
+    label: string;
     onclick?: ()=> void
 }
