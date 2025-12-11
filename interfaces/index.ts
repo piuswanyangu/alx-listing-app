@@ -1,5 +1,8 @@
 // card props
 
+import ReviewSection from "@/components/property/ReviewSection";
+import { ReactNode } from "react";
+
 export interface CardProps{
     title: string;
     image: string;
@@ -25,6 +28,7 @@ export interface Offers {
 }
 //  property props
 export interface PropertyProps {
+    description: ReactNode;
     name: string;
     address: Address;
     rating: number;
@@ -33,4 +37,20 @@ export interface PropertyProps {
     offers: Offers;
     image: string;
     discount?: string;
+}
+
+export interface PropertyDetailProps {
+    property: PropertyProps;
+}
+
+// review interface
+interface Review {
+    name: string;
+    avatar: string;
+    rating: number;
+    comment: string;
+}
+
+export interface ReviewSectionProps {
+    reviews: Review[];
 }
